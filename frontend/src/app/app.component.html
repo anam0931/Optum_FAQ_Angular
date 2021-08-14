@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <a ngbNavLink>English</a>
+      <ng-template ngbNavContent>
+        <br>
+        <app-accordion-toggle></app-accordion-toggle></ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Spanish</a>
+      <ng-template ngbNavContent>Spanish content</ng-template>
+    </li>
+  </ul>
+<div [ngbNavOutlet]="nav"></div>
+

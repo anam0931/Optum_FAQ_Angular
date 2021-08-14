@@ -1,0 +1,23 @@
+<div class="form-outline" class="mx-5">
+  <input type="search" [(ngModel)]="searchValue" id="form1" class="form-control" placeholder="Search"
+  aria-label="Search" />
+</div>
+
+
+<br>
+<br>
+
+
+<ngb-accordion #acc="ngbAccordion" *ngFor="let Faq of faq | searchfilter: searchValue" >
+    <ngb-panel id={{Faq.id}} title={{Faq.que}}>
+      <ng-template ngbPanelContent>
+        <span>{{Faq.ans}}</span>
+      </ng-template>
+    </ngb-panel>
+</ngb-accordion>
+  
+
+  
+ 
+  
+  
